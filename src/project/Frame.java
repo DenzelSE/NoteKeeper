@@ -1,4 +1,6 @@
 package project;
+import java.awt.event.KeyEvent;
+
 import javax.swing.*;
 
 public class Frame {
@@ -20,6 +22,8 @@ public class Frame {
 
         frame.setSize(500, 400);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // ImageIcon icon = new ImageIcon("path of the icon image");
     }
 
     public static void createTextarea() {
@@ -47,6 +51,7 @@ public class Frame {
         JMenuItem New = new JMenuItem("New");
         New.addActionListener(e -> FileMenu.newFile());
         filemenu.add(New);
+        New.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, KeyEvent.CTRL_DOWN_MASK));
         JMenuItem Open = new JMenuItem("Open");
         Open.addActionListener(e -> FileMenu.openFile());
         filemenu.add(Open);
