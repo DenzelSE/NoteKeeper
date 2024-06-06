@@ -47,18 +47,28 @@ public class Frame {
         JMenuItem New = new JMenuItem("New");
         New.addActionListener(e -> FileMenu.newFile());
         filemenu.add(New);
-
         JMenuItem Open = new JMenuItem("Open");
         Open.addActionListener(e -> FileMenu.openFile());
         filemenu.add(Open);
-
         JMenuItem Save = new JMenuItem("Save");
         Save.addActionListener(e -> FileMenu.save());
         filemenu.add(Save);
-
         JMenuItem saveAs = new JMenuItem("Save As..");
         saveAs.addActionListener(e -> FileMenu.saveAs());
         filemenu.add(saveAs);
+
+        JMenuItem cutItem = new JMenuItem("Cut");
+        cutItem.addActionListener(e -> Edit.cut());
+        editmenu.add(cutItem);
+        JMenuItem copyItem = new JMenuItem("Copy");
+        copyItem.addActionListener(e -> Edit.copy()); 
+        editmenu.add(copyItem);
+        JMenuItem pasteItem = new JMenuItem("paste");
+        pasteItem.addActionListener(e -> Edit.paste());
+        editmenu.add(pasteItem);
+        JMenuItem selectItem = new JMenuItem("select all");
+        selectItem.addActionListener(e -> Edit.selectAll()); 
+        editmenu.add(selectItem);
 
     }
 
