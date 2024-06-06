@@ -45,15 +45,18 @@ public class Frame {
         menu.add(formatmenu);
 
         JMenuItem New = new JMenuItem("New");
+        New.addActionListener(e -> FileMenu.newFile());
         filemenu.add(New);
 
         JMenuItem Open = new JMenuItem("Open");
+        Open.addActionListener(e -> FileMenu.openFile());
         filemenu.add(Open);
 
         JMenuItem Save = new JMenuItem("Save");
         filemenu.add(Save);
 
         JMenuItem saveAs = new JMenuItem("Save As..");
+        saveAs.addActionListener(e -> FileMenu.saveAs());
         filemenu.add(saveAs);
 
     }
