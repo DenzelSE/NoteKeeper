@@ -70,6 +70,16 @@ public class Frame {
         selectItem.addActionListener(e -> Edit.selectAll()); 
         editmenu.add(selectItem);
 
+        JMenuItem boldItem = new JMenuItem("bold");
+        boldItem.addActionListener(e -> FormatMenu.bold());
+        formatmenu.add(boldItem);
+        JMenuItem italicItem = new JMenuItem("Italic");
+        boldItem.addActionListener(e -> FormatMenu.italic());
+        formatmenu.add(italicItem);
+        JMenuItem fontColorItem = new JMenuItem("Font color");
+        boldItem.addActionListener(e -> FormatMenu.fontColor());
+        formatmenu.add(fontColorItem);
+
     }
 
 }
