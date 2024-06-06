@@ -62,6 +62,21 @@ public class FileMenu {
                 System.out.println("file can not be saved");
             }
         }
-
     }
-}
+    public static void save(){
+        if (fileName == null){
+            saveAs();
+            }
+        else {
+            try {
+                FileWriter writer = new FileWriter(filepath);
+                writer.write(Frame.textArea.getText());
+                writer.close();
+
+            } catch (Exception e) {
+                System.out.println("File cannot be saved");
+                }
+            }
+        }
+    }
+
